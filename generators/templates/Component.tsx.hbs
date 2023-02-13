@@ -8,9 +8,9 @@ interface {{pascalCase name}}Props extends Variants {
   className?: string;
 }
 
-const {{pascalCase name}} = ({children, className, ...variants}:{{pascalCase name}}Props) => {
+const {{pascalCase name}} = ({children, className, ...variantsAndRest}:{{pascalCase name}}Props) => {
   return(
-    <Styles.{{pascalCase name}}Wrapper className={className} {...variants}>
+    <Styles.{{pascalCase name}}Wrapper className={className} {...variantsAndRest}>
       {children}
     </Styles.{{pascalCase name}}Wrapper>
   )

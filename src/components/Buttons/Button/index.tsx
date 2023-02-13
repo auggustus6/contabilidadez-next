@@ -8,9 +8,9 @@ interface ButtonProps extends Variants {
   className?: string;
 }
 
-const Button = ({ children, className, ...variants }: ButtonProps) => {
+const Button = ({ children, className, ...variantsAndRest }: ButtonProps) => {
   return (
-    <Styles.Wrapper {...variants} className={className}>
+    <Styles.Wrapper {...variantsAndRest} className={className}>
       {children}
     </Styles.Wrapper>
   );
