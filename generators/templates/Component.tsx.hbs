@@ -1,17 +1,18 @@
 import { ReactNode } from "react";
 import * as Styles from './styles'
+import type { VariantProps } from "@stitches/react";
 
-interface {{pascalCase name}}Props {
+type Variants = VariantProps<typeof Styles.{{pascalCase name}}Wrapper>;
+interface {{pascalCase name}}Props extends Variants {
   children?: ReactNode;
   className?: string;
 }
 
-
-const {{pascalCase name}} = ({children, className}:{{pascalCase name}}Props) => {
+const {{pascalCase name}} = ({children, className, ...variants}:{{pascalCase name}}Props) => {
   return(
-    <Styles.Wrapper>
+    <Styles.{{pascalCase name}}Wrapper className={className} {...variants}>
       {children}
-    </Styles.Wrapper>
+    </Styles.{{pascalCase name}}Wrapper>
   )
 };
 
