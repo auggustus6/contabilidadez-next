@@ -1,13 +1,18 @@
 import { globalStyles } from "@/styles/global";
-import { Roboto } from "@next/font/google";
+import { Montserrat } from "@next/font/google";
 import type { AppProps } from "next/app";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
+const montSerrat = Montserrat({ subsets: ["latin"], weight: ["200", "400", "700", "900"] });
 globalStyles();
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={roboto.className}>
+    <div className={montSerrat.className}>
       <Component {...pageProps} />
     </div>
   );

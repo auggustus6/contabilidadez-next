@@ -22,7 +22,16 @@ export const { config, styled, globalCss, keyframes, getCssText, theme, createTh
   createStitches({
     theme: {
       colors: {
-        teste: "#0f0",
+        white: "#fff",
+        ["black-100"]: "#111",
+        ["black-300"]: "#222",
+        ["black-500"]: "#333",
+        ["black-900"]: "#555",
+        ["gray-100"]: "#777",
+        ["gray-500"]: "#999",
+        ["gray-700"]: "#bbb",
+        ["gray-900"]: "#ddd",
+        ["orange-500"]: "#d4853b",
       },
       fonts: {
         default: "Roboto, sans-serif",
@@ -36,6 +45,7 @@ export const { config, styled, globalCss, keyframes, getCssText, theme, createTh
         lg: "1.125rem",
         xl: "1.25rem",
         "2xl": "1.5rem",
+        "3xl": "1.75rem",
         "4xl": "2rem",
         "5xl": "2.25rem",
         "6xl": "3rem",
@@ -44,8 +54,8 @@ export const { config, styled, globalCss, keyframes, getCssText, theme, createTh
         "9xl": "6rem",
       },
       fontWeights: {
+        thin: "300",
         regular: "400",
-        medium: "500",
         bold: "700",
       },
       lineHeights: {
@@ -64,5 +74,13 @@ export const { config, styled, globalCss, keyframes, getCssText, theme, createTh
       },
       space: sizes,
       sizes: sizes,
+      transitions: {
+        default: "0.3s ease-in-out",
+      },
+    },
+    media: {
+      lg: "(max-width: 1170px)",
+      md: "(max-width: 768px)",
+      sm: "(max-width: 450px)",
     },
   });

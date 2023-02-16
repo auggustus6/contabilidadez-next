@@ -15,12 +15,32 @@ export const globalStyles = globalCss({
   },
   html: {
     "scroll-behavior": "smooth",
+    color: "$black-500",
   },
 
   button: {
     border: "none",
     cursor: "pointer",
     outline: "none",
+  },
+
+  h1: {
+    fontSize: "$7xl",
+  },
+  h2: {
+    fontSize: "$6xl",
+  },
+  h3: {
+    fontSize: "$5xl",
+  },
+  h4: {
+    fontSize: "$4xl",
+  },
+  h5: {
+    fontSize: "$3xl",
+  },
+  h6: {
+    fontSize: "$2xl",
   },
 
   a: {
@@ -39,5 +59,10 @@ export const globalStyles = globalCss({
     "&:hover": {
       background: "#868585",
     },
+  },
+
+  "::selection": {
+    color: "$white",
+    background: "$orange-500",
   },
 });
