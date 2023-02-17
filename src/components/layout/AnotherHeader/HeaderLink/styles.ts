@@ -1,24 +1,5 @@
 import { styled } from "@/styles";
 
-export const HeaderLinkWrapper = styled("li", {
-  color: "$white",
-  position: "relative",
-  ["a"]: {
-    color: "$white",
-  },
-
-  padding: "$4",
-
-  [`&:hover > ul`]: {
-    // all: "unset",
-    visibility: "visible",
-    pointerEvents: "all",
-    opacity: 1,
-    height: "unset",
-    marginTop: "$4",
-  },
-});
-
 export const DrawerWrapper = styled("ul", {
   visibility: "hidden",
   pointerEvents: "none",
@@ -29,14 +10,15 @@ export const DrawerWrapper = styled("ul", {
   display: "flex",
   flexDirection: "column",
   minWidth: "150px",
-  top: "$10",
+  top: "0",
+
+  "&:before": {
+    content: "",
+    width: "100%",
+  },
 
   "@lg": {
     position: "static",
-    height: 0,
-    ["ul"]: {
-      paddingTop: "$8",
-    },
   },
 
   ["li"]: {
@@ -53,8 +35,22 @@ export const DrawerWrapper = styled("ul", {
     "&:hover": {
       background: "$black-300",
     },
+
+    "@lg": {},
   },
 });
 
-// export const HeaderLinkWrapper = styled("div", {});
-// export const DrawerWrapper = styled("div", {});
+export const HeaderLinkWrapper = styled("li", {
+  color: "$white",
+  position: "relative",
+  ["a"]: {
+    color: "$white",
+  },
+  [`&:hover > ul`]: {
+    // all: "unset",
+    visibility: "visible",
+    pointerEvents: "all",
+    opacity: 1,
+    height: "unset",
+  },
+});

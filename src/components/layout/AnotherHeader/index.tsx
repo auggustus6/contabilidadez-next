@@ -4,7 +4,7 @@ import { Container } from "../Container";
 import { Logo } from "../Logo";
 import Link from "next/link";
 import { HeaderLink } from "./HeaderLink";
-import { List, X as CloseIcon } from "phosphor-react";
+import { List } from "phosphor-react";
 import { useState } from "react";
 
 type Variants = VariantProps<typeof Styles.Wrapper>;
@@ -66,16 +66,8 @@ const Header = ({ className, ...variants }: HeaderProps) => {
           <a href="">GENTE</a>
           <a href="">RESPONSABILIDADE SOCIAL</a>
           <a href="">CONTATO</a> */}
-          {isOpen && (
-            <Styles.OpenMenuButton
-              css={{ zIndex: 99, display: "block", position: "fixed", top: "$6", right: "$4" }}
-              onClick={() => setIsOpen(false)}
-            >
-              <CloseIcon size={32} color="white" />
-            </Styles.OpenMenuButton>
-          )}
         </Styles.NavLinks>
-        <Styles.OpenMenuButton onClick={() => setIsOpen(true)}>
+        <Styles.OpenMenuButton onClick={() => setIsOpen((old) => !old)}>
           <List size={32} color="white" />
         </Styles.OpenMenuButton>
       </Container>

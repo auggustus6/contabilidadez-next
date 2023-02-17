@@ -33,15 +33,16 @@ const HeaderLink = ({
       {href ? <Link href={href}>{children}</Link> : children}
       {drawerLinks && (
         <Styles.DrawerWrapper>
-          {drawerLinks.map((link, i) => (
-            <li key={i}>
-              <Link href={link.href}>{link.title}</Link>
-            </li>
-          ))}
+          <div>
+            {drawerLinks.map((link, i) => (
+              <li key={i}>
+                <Link href={link.href}>{link.title}</Link>
+              </li>
+            ))}
+          </div>
         </Styles.DrawerWrapper>
       )}
       {/* {drawerLinks && <Drawer drawerLinks={drawerLinks} />} */}
-      
     </Styles.HeaderLinkWrapper>
   );
 };

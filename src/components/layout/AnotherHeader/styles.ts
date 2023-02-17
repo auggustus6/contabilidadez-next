@@ -13,15 +13,22 @@ export const Wrapper = styled("header", {
 
 export const NavLinks = styled("nav", {
   position: "relative",
-
-  ["& > ul"]: {
+  ["ul"]: {
     display: "flex",
-    // gap: "$8",
+    gap: "$8",
     fontSize: "$xxs",
     fontWeight: "$bold",
     letterSpacing: "1px",
     listStyle: "none",
   },
+  // marginTop: "$6",
+  // a: {
+  //   color: "$white",
+  //   transition: "$default",
+  //   "&:hover": {
+  //     color: "$orange-500",
+  //   },
+  // },
 
   "@lg": {
     display: "none",
@@ -32,7 +39,7 @@ export const NavLinks = styled("nav", {
       true: {
         display: "contents",
 
-        ["& > ul"]: {
+        ["ul"]: {
           position: "absolute",
           display: "flex",
           flexDirection: "column",
@@ -42,8 +49,7 @@ export const NavLinks = styled("nav", {
           top: 0,
           right: 0,
           paddingTop: "4rem",
-          paddingLeft: "2rem",
-          "@lg": {},
+          paddingLeft: "2rem"
         },
       },
     },
